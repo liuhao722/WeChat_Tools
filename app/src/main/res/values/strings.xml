@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">手指精灵</string>
+
+    <string name="btn1_msg">==自动回信息不弹输入法==</string>
+    <string name="btn2_msg">==自动回信息弹出输入法==</string>
+    <string name="btn3_msg">==自动刷新附近的人占位==</string>
+    <string name="btn4_msg">==自动为朋友圈好友点赞==</string>
+    <string name="btn5_msg">====自动执行所有操作====</string>
+    <string name="btn6_msg">=======测试输出=======</string>
+    <string name="btn7_msg">=========钉钉=========</string>
+</resources>

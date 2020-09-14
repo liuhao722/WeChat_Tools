@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+def applicationIdD = "com.nextjoy.clicker"
+def versionCodeD = 2
+def versionNameD = "1.0.1"
+def minSdkVersionD = 14
+def targetSdkVersionD = 19
+def compileSdkVersionD = 25
+def buildToolsVersionD = "25.0.2"
+def supportVersion = "25.0.1"
+android {
+    compileSdkVersion compileSdkVersionD
+    buildToolsVersion buildToolsVersionD
+    defaultConfig {
+        applicationId applicationIdD
+        minSdkVersion minSdkVersionD
+        targetSdkVersion targetSdkVersionD
+        versionCode versionCodeD
+        versionName versionNameD
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:' + supportVersion
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.lzy.net:okserver:+'
+}

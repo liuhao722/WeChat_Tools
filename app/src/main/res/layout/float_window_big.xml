@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/big_window_layout"
+    android:layout_width="96dp"
+    android:layout_height="88dp"
+    android:background="@drawable/shape_big_float_bg">
+
+    <Button
+        android:id="@+id/close"
+        style="@style/btn_tx_style"
+        android:text="关闭悬浮窗"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_start"
+        style="@style/btn_tx_style"
+        android:visibility="gone"
+        android:text="启动工具" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        style="@style/btn_tx_style"
+        android:layout_below="@id/btn_start"
+        android:text="停止工具" />
+
+    <Button
+        android:id="@+id/btn_open"
+        style="@style/btn_tx_style"
+        android:visibility="gone"
+        android:layout_below="@id/btn_stop"
+        android:text="打开工具" />
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/btn_tx_style"
+        android:layout_below="@id/btn_open"
+        android:text="关闭窗口" />
+</RelativeLayout>
